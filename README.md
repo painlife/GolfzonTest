@@ -29,5 +29,6 @@ API를 결과인 이미지 리스트를 사용하여 다음 요구사항에 맞�
   * Coroutine
   * Retrofit2
   * Glide4
+  * Paging3
 ```
 
