@@ -2,10 +2,14 @@
 
 
 ### 과제 제출 방법
+- `제한 시간 : 3일 (72시간)`
 - `fork 하지마세요.`
-- `clone 하고, 개인 git repository에 추가하고 해당 repository를 공유해주세요`
+- `clone 하고, 개인 git repository 생성하여 commit 해주세요`
+- `최종 제출은 Project를 압축하여 전달해주시고, 해당 respository 정보도 전달해주세요`
 
 
+
+### 과제 내용
 
 API를 결과인 이미지 리스트를 사용하여 다음 요구사항에 맞춰 안드로이드 앱을 작성해주세요
 
