@@ -1,62 +1,63 @@
-# 골프존 R&D센터 안드로이드 과제
+# Golfzon R&D Cneter Android Assignment
+
+[Tiếng Việt](README.md) | [한국어](README-ko.md)
+
+### Cách gửi bài kiểm tra
+- `Thời gian: 3 ngày (72 giờ)`
+- `Hãy đừng fork.`
+- `Hãy clone, tạo git respository cá nhân và thực hiện commit.`
+- `Đối với việc gửi bản final thì hãy nén Project lại và gửi kèm theo cả thông tin respository tương ứng.`
 
 
-### 과제 제출 방법
-- `제한 시간 : 3일 (72시간)`
-- `fork 하지마세요.`
-- `clone 하고, 개인 git repository 생성하여 commit 해주세요`
-- `최종 제출은 Project를 압축하여 전달해주시고, 해당 respository 정보도 전달해주세요`
 
+### Nội dung bài kiểm tra
 
-
-### 과제 내용
-
-API를 결과인 이미지 리스트를 사용하여 다음 요구사항에 맞춰 안드로이드 앱을 작성해주세요
+Hãy tạo Android app đáp ứng các yêu cầu như sau và sử dụng danh sách ảnh từ API.
 
 ```
-1. 프로젝트는 멀티모듈을 필수적으로 구성해주세요 (App module 외 최소 1개 이상)
+1. Project cần phải được tạo thành từ multi module (tối thiểu từ 1 cái trở lên ngoài App module)
 
-2. UI는 fragment 2개를 사용합니다.
+2. UI sử dụng 2 fragment.
 
-3. Bottom Tab을 하용하여 fragment를 전환합니다.
+3. Sử dụng Bottom Tab rồi chuyển đổi fragment.
 
-4. 첫번째 fragment (LIST)
-  * 이미지 목록을 Grid (column 3) 형태로 보여줍니다.
-  * 스크롤을 통해 다음 페이지의 이미지를 불러옵니다. (최대한 자연스러운 스크롤이 될수 있도록 해주세요)
-  * 하나의 이미지는 정사각형으로 노출합니다. (이미지는 CenterCrop)
-  * 이미지 위에 다음을 표시하세요
-    - 이미지 ID (API에서 받은 id)
-    - Favorite 추가된 이미지는 추가되었다는 아이콘을 보여줍니다.(좋아요/별표/하트 등)
-  * 이미지를 선택(터치)하면 Favorite에 추가합니다.
-  * 이미 추가된 이미지를 다시 선택(터치)하는 경우에는 Favorite에서 제거합니다.
+4. fragment thứ nhất (LIST)
+  * Hãy show danh sách ảnh theo hình thức Grid (column 3).
+  * Thông qua scroll và gọi ảnh của page khác. (Bạn hãy cố gắng làm sao để thực hiện scroll thật tự nhiên nhất có thể)
+  * 1 ảnh được hiển thị theo hình vuông. (CenterCrop ảnh) 
+  * Hiển thị nội dung sau phía trên hình ảnh:
+    - Image ID (id nhận được trên API)
+    - Ảnh dã được thêm Favorite thì hiển thị icon đã được thêm. (Ví dụ như Like/hình ngôi sao/hình trái tim v.v...)
+  * Nếu chọn (touch) ảnh thì nó sẽ được thêm vào Favorite.
+  * Đối với trường hợp nếu chọn (touch) lại vào ảnh đã được thêm thì nó sẽ được bỏ khỏi Favorite.
 
-5. 두번쩨 fragment (FAVORITE)
-  * Favorite에 추가된 이미지 목록을 화면에 보여주세요
-  * 요구사항은 첫번째 fragment와 같습니다.
-  * Favorite에 추가된 내용은 앱 재시작 후에도 보여야 합니다.
-    (Room, DataStore, SharedPreferences 등을 선택적으로 이용)
+5. fragment thứ hai (FAVORITE)
+  * Hãy show danh sách ảnh được thêm vào favorite trên màn hình.
+  * Nội dung yêu cầu tương tự với fragment thứ nhất.
+  * Nội dung đã được thêm ở Favorite cần phải được show kể cả sau khi restart lại app.
+    (Sử dụng Room, DataStore, SharedPreferences v.v... một cách chọn lọc)
 
-6. API는 (https://thedogapi.com/)에서 Free plan으로 apikey를 발급받아서 적용해주세요
+6. Đối với API thì bạn hãy nhận apikey từ Free plan ở (https://thedogapi.com/) và áp dụng.
 
-7. 다음 키워드를 참고 하여 프로젝트를 구성해 주세요
-   (모든 요소가 필수는 아닙니다.)
+7. Hãy tham khảo keyword sau đây và tạo nên project.
+   (Không phải tất cả các yếu tố đều là bắt buộc.)
   * MVVM
   * Flow
   * Coroutine
   * Retrofit2
-  * Glide4
+  * Glide
   * Paging3
 ```
 
-추가 개발 요구 사항
+Nội dung yêu cầu phát triển bổ sung
 
 ```
-1. gridItem을 long click하는 경우 상세 페이지로 이동합니다. (새로운 Activity)
-2. 선택된 이미지를 보여줍니다.
-3. API에서 받은 정보를 왼쪽, 아래에 표시해 주십니다.
-4. 오른쪽 상단에 favorite icon을 노출해주세요 (선택된 것과 선택되지 않은것 구분)
-5. favorite icon를 터치하면 하면 favorite에 추가 및 제거가 되어야 합니다.
-6. 이미지는 스와이프하여 이전 이미지와 이후 이미지로 이동합니다.
-7. paging이 필요한 경우 api를 통해 다음 페이지를 요청해주세요
+1. Trường hợp long click vào gridItem thì di chuyển tới page chi tiết. (Activity mới)
+2. Show ảnh đã được chọn.
+3. Hãy hiển thị thông tin nhận được từ API ở bên trái, ở dưới.
+4. Hãy hiển thị favorite icon ở trên cùng bên phải (phân biệt rõ cái được chọn và cái không được chọn)
+5. Nếu touch favorite icon thì cần phải thực hiện được hành động thêm và hủy thêm vào Favorite.
+6. Khi swipe ảnh thì cần phải di chuyển tới ảnh trước và ảnh sau.
+7. Trường hợp cần paging thì hãy request page sau thông qua API.
 ```
 
