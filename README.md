@@ -25,7 +25,7 @@ Hãy tạo Android app đáp ứng các yêu cầu như sau và sử dụng danh
   * Hãy show danh sách ảnh theo hình thức Grid (column 3).
   * Thông qua scroll và gọi ảnh của page khác. (Bạn hãy cố gắng làm sao để thực hiện scroll thật tự nhiên nhất có thể)
   * 1 ảnh được hiển thị theo hình vuông. (CenterCrop ảnh) 
-  * Hiển thị nội dung sau phía trên hình ảnh:
+  * Hãy hiển thị nội dung sau đây trên ảnh
     - Image ID (id nhận được trên API)
     - Ảnh dã được thêm Favorite thì hiển thị icon đã được thêm. (Ví dụ như Like/hình ngôi sao/hình trái tim v.v...)
   * Nếu chọn (touch) ảnh thì nó sẽ được thêm vào Favorite.
