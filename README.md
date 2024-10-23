@@ -1,4 +1,4 @@
-# Golfzon R&D Cneter Android Assignment
+# Golfzon R&D Center Android Assignment
 
 [Tiếng Việt](README.md) | [한국어](README-ko.md)
 
